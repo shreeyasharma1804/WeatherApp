@@ -1,3 +1,5 @@
+
+
 get_lat_long().then(data =>{
   latitude = data[0].lat;
   longitude = data[0].lon;

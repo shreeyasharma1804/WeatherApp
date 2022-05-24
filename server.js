@@ -1,4 +1,5 @@
-require('dotenv').config();
+require('dotenv').config({path:'./public/.env'})
+
 const OPEN_WEATHER_API = process.env.OPEN_WEATHER_API;
 const express = require('express');
 const app = express();
@@ -22,3 +23,5 @@ app.post('/weather',(req,res)=>{
 app.listen(3000,()=>{
     console.log('Listening')
 });
+
+module.exports = OPEN_WEATHER_API
