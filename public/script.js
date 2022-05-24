@@ -1,4 +1,4 @@
-
+const OPEN_WEATHER_API = .env.OPEN_WEATHER_API;
 
 get_lat_long().then(data =>{
   latitude = data[0].lat;
@@ -45,7 +45,7 @@ function setWeatherData(data){
 async function get_lat_long(){
   let place = await document.getElementById('data-city-search').value;
   console.log(place);
-  let response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=5&appid=c2a4f243c670c89b4bfe6329f90f958d`)
+  let response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${place}&limit=5&appid=${OPEN_WEATHER_API}`)
   let data = await response.json();
   console.log(data)
   return data;
