@@ -7,7 +7,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script defer src="script.js"></script>
-    <script defer src="env.js"></script>
     <title>Weather App</title>
 </head>
 
@@ -26,19 +25,22 @@
         <div class="detail-section">
           <div class="detail">
             <div class="title">Wind</div>
-            <div class="value" data-wind>TBD</div>
+            <div class="value" id = "data-wind">TBD</div>
           </div>
           <div class="detail bordered">
               <div class="title">Temperature</div>
-            <div class="value" data-temperature>TBD</div>
+            <div class="value" id="data-temperature">TBD</div>
           </div>
           <div class="detail">
             <div class="title">Humidity</div>
-            <div class="value" data-humidity>TBD</div>
+            <div class="value" id="data-humidity">TBD</div>
           </div>
         </div>
-        <div class="city-search-container">
-          <input type="text" class="city-search" id="data-city-search" placeholder="Enter Location">
+          <div class="city-search-container">
+            <input type="text" class="city-search" id="data-city-search" name="location" placeholder="Enter Location">
+            <input type="submit" onclick="update()" value="Submit">
+          </div>
+
         </div>
       </div>
     </div>
